@@ -1,0 +1,28 @@
+심볼릭 링크 / 하드 링크 차이
+ls -n bash lll
+./lll
+ls -n tmp ttt
+cd ttt
+ls -n my_bash bash
+
+ls -ali // inode 번호 출력
+====
+ls -al root
+sudo chroot root
+cd root/bin
+file bash
+ldd bash //동적으로 링크되어 있는 라이브러리 보여줌
+
+cp /bin/bash bin/
+ls -al bin
+sudo chroot root2
+
+라이브러리까지 복사
+cp -dpr /lib /lib64 root2/ (파일의 속성 모두 복사)
+ls -al root2
+ls -al root2/bin
+sudo chroot root2
+
+ls -ald /lib
+cp -dp ~~
+cp -r /lib /lib64 root2/
